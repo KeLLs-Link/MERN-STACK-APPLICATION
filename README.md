@@ -46,3 +46,29 @@ N/B: After creating the Todo directory, run the ls command to verify that the To
 ls
 ```
 ![image](./screenshots/todo-directory.png)
+
+change your current directory to the newly created Todo directory
+
+```
+cd Todo
+```
+- ### Initialize your Todo applicaiton project directory. 
+```
+npm init
+```
+Next, you will use the command npm init to initialise your project, so that a new file named package.json will be created. This file will normally contain information about your application and the dependencies that it needs to run. Follow the prompts after running the command. You can press Enter several times to accept default values, then accept to write out the package.json file by typing yes.
+
+- **PS: The npm init command is used to initialize a new Node.js project by creating a package.json file. When you run npm init, npm (Node Package Manager) guides you through a series of prompts to gather information about your project, such as its name, version, description, entry point, test command, author, license, etc. Based on your responses, npm generates a package.json file with the provided metadata.**
+
+- **Here's what happens when you run npm init:**
+
+1. Prompts for Project Information: npm prompts you to provide information about your project. It asks questions such as the project name, version, description, entry point (main file), test command, repository URL, author name, license, etc.
+
+2. User Input: You enter the requested information for each prompt. You can press Enter to accept the default value (shown in parentheses) or type your own value.
+
+3. Package.json Generation: Once you've provided all the necessary information, npm generates a package.json file based on your responses. This file contains metadata about your project and is used by npm to manage dependencies, scripts, and other project-related settings.
+
+4. The package.json file is crucial for Node.js projects as it serves as a manifest for the project, listing its dependencies, scripts for running tasks, and other metadata. It's used by npm to install dependencies, run scripts, and manage project settings. Creating a package.json file using npm init is typically the first step when starting a new Node.js project.
+                    ***helpful tip yeah!!! 😊***
+
+![scrennshot](./screenshots/npminit.png)
