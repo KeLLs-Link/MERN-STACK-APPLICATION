@@ -52,7 +52,7 @@ change your current directory to the newly created Todo directory
 ```
 cd Todo
 ```
-- ### Initialize your Todo applicaiton project directory. 
+- ### Initialize your Todo applicaiton project directory
 ```
 npm init
 ```
