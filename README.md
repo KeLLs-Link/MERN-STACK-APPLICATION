@@ -114,3 +114,12 @@ run the following command to vrify dotenv has been succefully installed.
 cat package.json
 ```
 ![screenshot](./screenshots/dotenv.png)
+
+Open the index.js file with the command below
+```
+vim index.js 
+```
+
+**PS**: you can use your prefered command line text editor viz: vim, Emacs, nano, neovim, sublime text, atom, etc. 
+
+***🤗Vim and Nano are my most preffered command-line text editor 😊***
