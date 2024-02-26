@@ -124,7 +124,7 @@ vim index.js
 
 ***🤗Vim and Nano are my most preffered command-line text editor 😊***
 
-paste the code bellow in the vim editor
+paste the code bellow in the vim text editor
 ```
 const express = require('express');
 require('dotenv').config();
@@ -153,3 +153,10 @@ save and exit a file in vim using the command bellow
 Press: esc
 type: :wq
 ```
+N/B: Notice that we have specified to use port 5000 in the code. This will be required later when we go on the browser.
+
+![image](./screenshots/serverrunning.png)
+Now we need to open this port in EC2 Security Groups
+
+![image](./screenshots/portoppened.png)
+Inbound rule allowed on port 5000
