@@ -72,3 +72,45 @@ Next, you will use the command npm init to initialise your project, so that a ne
                     ***helpful tip yeah!!! 😊***
 
 ![scrennshot](./screenshots/npminit.png)
+
+while still in the Todo directory, run the ls command to ensure that package.json file has been created in the Todo directory
+
+```
+ls
+```
+___
+
+- ### INSTALL EXPRESS.JS
+- Install ExpressJs and create the routes directory
+
+ Express.js allows you to define routes for handling different HTTP requests (e.g., GET, POST, PUT, DELETE) and their corresponding responses.
+ Express is a framework for Node.js, therefore a lot of things developers would have programmed is already taken care of out of the box. Therefore, it simplifies development, and abstracts a lot of low-level details. For example, Express helps to define routes of your application based on HTTP methods and URLs.
+To use express, install it using npm:
+
+```
+npm install express
+```
+To verify if Express has been installed on your server, you can look for its presence in the package.json file of your Node.js project or globally on your server.
+```
+cat package.json
+```
+![screenshot](./screenshots/express-installed.png)
+
+- ### Now create a file index.js with the command below
+
+```
+touch index.js
+```
+Install the dotenv module
+```
+npm install dotenv
+```
+**'dotenv'** is a Node.js module that loads environment variables from a .env file into the process.env object. It's commonly used in Node.js applications to manage configuration settings and sensitive information like API keys, database URIs, and other environment-specific variables. By using dotenv, you can keep sensitive information separate from your codebase and easily manage different configurations for development, testing, and production environments. It helps improve security and maintainability of your Node.js applications.
+
+To verify if dotenv has been installed in your Node.js project directory, you can check the package.json file or look for the node_modules directory.
+
+run the following command to vrify dotenv has been succefully installed.
+```
+cat package.json
+```
+![screenshot](./screenshots/dotenv.png)
