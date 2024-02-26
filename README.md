@@ -1,5 +1,8 @@
 # MERN-STACK-APPLICATION
-## A To-do web application implementation on a MERN Stack
+## A To-do web application implementation on a MERN Stack 
+This web applciation is deployed on an EC2 Instance/Virtual Server running on the AWS Cloud
+![screenshot](./screenshots/ec2ubuntuserver.png)
+
 - The MERN stack is a popular JavaScript stack which is used for building modern day web applications. MERN is an acronym that stands for: MongoDB, Express.js, React, Node.js
 
 **MongoDB:** MongoDB is a NoSQL database that stores data in flexible, JSON-like documents. MongoDB is highly scalable, flexible, and easy to use. This makes it a popular choice for web applications that require handling data in a more dynamic and flexible way.
