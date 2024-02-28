@@ -172,3 +172,63 @@ http://18.117.240.107/:5000
 ***PS: Public IP addresses of ec2 instances are ephemeral- they change each time you stop and start an instance.***
 
 ![screenshot](./screenshots/welcome-to-express.png)
+
+- ### Routes
+Our Todo applicaion will be tasked with perfoming three actions.
+1. Create a new task
+2. Display list of all tasks
+3. Delete a completed task
+
+Each task will be associated with some particular endpoint and will use different standard HTTP request methods: ***POST, GET, DELETE.***
+For each task, we need to create routes that will define various endpoints that the To-do app will depend on. So let us create a routes folder.
+```
+mkdir routes
+```
+Enter the routes directory
+```
+cd routes
+```
+Now, create a file ***api.js*** with the command below
+```
+touch api.js
+```
+You can open the api.js file with your favourite command line text editor and post the code below. **I'll use vim 🥰**
+```
+const express = require ('express');
+const router = express.Router();
+ 
+router.get('/todos', (req, res, next) => {
+ 
+});
+ 
+router.post('/todos', (req, res, next) => {
+ 
+});
+ 
+router.delete('/todos/:id', (req, res, next) => {
+ 
+})
+ 
+module.exports = router;
+```
+Let's create the Models directory.
+
+- ### MODELS ###
+Now comes the interesting part, since the app is going to make use of Mongodb which is a NoSQL database, we need to create a model.
+- A model is at the heart of JavaScript based applications, and it is what makes it interactive.
+We will also use models to define the database schema . This is important so that we will be able to define the fields stored in each Mongodb document. 
+
+
+In essence, the Schema is a blueprint of how the database will be constructed, including other data fields that may not be required to be stored in the database. These are known as virtual properties.
+
+- To create a Schema and a model, install mongoose which is a Node.js package that makes working with mongodb easier.
+
+Change directory back Todo folder with 
+```
+cd .. 
+```
+***N/B: .. takes you one directory behind***
+
+and install Mongoose
+
+c
