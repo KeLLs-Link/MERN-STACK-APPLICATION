@@ -223,12 +223,35 @@ In essence, the Schema is a blueprint of how the database will be constructed, i
 
 - To create a Schema and a model, install mongoose which is a Node.js package that makes working with mongodb easier.
 
-Change directory back Todo folder with 
+Change directory back Todo folder with 👎and install mongoose
 ```
 cd .. 
 ```
 ***N/B: .. takes you one directory behind***
 
-and install Mongoose
+```
+npm install Mongoose
+```
+veify that mongoose has been installed using the command
+```
+npm list mongoose
+```
+![image](./screenshots/mongoose-installed.png)
 
-c
+Create a new directory; models
+```
+mkdir models
+```
+Change directory into the newly created ‘models’ folder with
+```
+cd models
+```
+Inside the models directory, create a file and name it todo.js
+```
+touch todo.js
+```
+**N/B: Tip:** All three commands above can be defined in one line to be executed consequently with help of && operator, like this ⤵️
+```
+mkdir models && cd models && touch todo.js
+```
+
