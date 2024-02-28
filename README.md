@@ -158,5 +158,17 @@ N/B: Notice that we have specified to use port 5000 in the code. This will be re
 ![image](./screenshots/serverrunning.png)
 Now we need to open this port in EC2 Security Groups
 
+
 ![image](./screenshots/portoppened.png)
 Inbound rule allowed on port 5000
+
+Open up your preffered browser and try to access your server’s Public IP or Public DNS name followed by port :5000
+```
+http://<PublicIP-or-PublicDNS>:5000
+```
+```
+http://18.117.240.107/:5000
+```
+***PS: Public IP addresses of ec2 instances are ephemeral- they change each time you stop and start an instance.***
+
+![screenshot](./screenshots/welcome-to-express.png)
