@@ -295,4 +295,6 @@ Todo.findOneAndDelete({"_id": req.params.id})
  
 module.exports = router;
 ```
+We now head onto mongoDB configuration as the next piece of our Todo application.
 
+- **MONGODB DATABASE CONFIG**
