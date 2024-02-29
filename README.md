@@ -298,3 +298,94 @@ module.exports = router;
 We now head onto mongoDB configuration as the next piece of our Todo application.
 
 - **MONGODB DATABASE CONFIG**
+
+We need a database where we will store our data. For this we will make use of mLab. mLab provides MongoDB database as a service solution (DBaaS), so to make life easy, you will need to sign up for a shared clusters free account, which is ideal for our use case. Sign up here. Follow the sign up process, select AWS as the cloud provider, and choose a region near you.
+
+- ### DBaaS
+**DBaaS stands for "Database as a Service"**. It refers to a cloud computing service model where database management tasks are outsourced to a third-party provider, who hosts and maintains the database infrastructure, while the users access and use the database through the Internet.
+
+In a DBaaS model, users typically do not need to worry about managing the underlying hardware, software installation, configuration, scaling, backups, and security of the database. Instead, these tasks are handled by the service provider, allowing users to focus on developing applications and using the database without the burden of managing the infrastructure.
+
+***PS: In order to protect my mongodb account, I decided to add a MFA using google authenticator-app***
+![screenshot](./screenshots/mongodbconfig.png)
+
+In the **index.js** file, we specified process.**env** to access environment variables, but we have not yet created this file. So we need to do that now.
+Create a file in your Todo directory and name it .env.
+```
+touch .env
+```
+copy the connection string to the .env file to access the database in it.
+![screenshot](./screenshots/connection-stringsss.png)
+
+```
+vim .env
+```
+```
+DB= mongodb+srv://<username>:<password>@cluster0.icssbqo.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
+```
+***N/B: In the connection string above, edit and input your username and password***
+
+Now we need to update the **index.js** to reflect the use of **.env** so that Node.js can connect to the database.
+Simply delete existing content in the file, and update it with the entire code below.
+```
+const express = require('express');
+const bodyParser = require('body-parser');
+const mongoose = require('mongoose');
+const routes = require('./routes/api');
+const path = require('path');
+require('dotenv').config();
+ 
+const app = express();
+ 
+const port = process.env.PORT || 5000;
+ 
+//connect to the database
+mongoose.connect(process.env.DB, { useNewUrlParser: true, useUnifiedTopology: true })
+.then(() => console.log(`Database connected successfully`))
+.catch(err => console.log(err));
+ 
+//since mongoose promise is depreciated, we overide it with node's promise
+mongoose.Promise = global.Promise;
+ 
+app.use((req, res, next) => {
+res.header("Access-Control-Allow-Origin", "\*");
+res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+next();
+});
+ 
+app.use(bodyParser.json());
+ 
+app.use('/api', routes);
+ 
+app.use((err, req, res, next) => {
+console.log(err);
+next();
+});
+ 
+app.listen(port, () => {
+console.log(`Server running on port ${port}`)
+});
+```
+To do that using vim, follow below steps
+Open the file with 
+```
+vim index.js
+Press esc
+Type :
+Type %d
+Hit ‘Enter’
+The entire content will be deleted, then,
+Press i to enter the insert mode in vim
+paste the code above
+press esc
+press :wq to save and exit vim editor mode
+```
+Using environment variables to store information is considered more secure and best practice to separate configuration and secret data from the application, instead of writing connection strings directly inside the index.js application file.
+Start your server using the command:
+
+```
+node index.js
+```
+
+
+
