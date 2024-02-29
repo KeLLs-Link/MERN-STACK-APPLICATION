@@ -386,6 +386,16 @@ Start your server using the command:
 ```
 node index.js
 ```
+You shall see a message **‘Database connected successfully’**, if so – we have our backend configured. 
+
+![screenshot](./screenshots/connection-string.png)
+
+- ***woah!!! 😸 🥰 Congratulations 🥇 👍***
+
+
+### Now we are going to test it.
+Testing Backend Code without Frontend using RESTful API.
+
 
 
 
