@@ -453,5 +453,12 @@ In Todo folder open the **package.json** file. Change the highlighted part of th
 "dev": "concurrently \"npm run start-watch\" \"cd client && npm start\""
 },
 ```
+Now we Configure Proxy in package.json
+Change directory to ‘client’
+```
+cd client
+```
+Open the package.json file
+
 
 
