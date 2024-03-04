@@ -459,6 +459,42 @@ Change directory to ‘client’
 cd client
 ```
 Open the package.json file
+```
+vim package.json
+```
+Add the key value pair in the package.json file "proxy": "http://localhost:5000".
+The whole purpose of adding the proxy configuration in number 3 above is to make it possible to access the application directly from the browser by simply calling the server url like http://localhost:5000 rather than always including the entire path like http://localhost:5000/api/todos
+Now, ensure you are inside the Todo directory, and simply do:
+
+Start the Development Server
+```
+npm run dev
+```
+***N/B: Do not forget to allow an inbound security group rule on port 3000***
+
+- **For our Todo app, there will be two stateful components and one stateless component.**
+
+Go to client directory from your Todo directory
+
+```
+cd client
+```
+move to the src directory
+```
+cd src
+```
+Inside your src folder create another folder called components
+```
+mkdir components
+```
+Move into the components directory with
+```
+cd components
+```
+Inside ‘components’ directory create three files Input.js, ListTodo.js and Todo.js.
+```
+touch Input.js ListTodo.js Todo.js
+```
 
 
 
