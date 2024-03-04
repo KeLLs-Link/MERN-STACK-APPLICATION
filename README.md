@@ -471,7 +471,7 @@ Start the Development Server
 npm run dev
 ```
 ***N/B: Do not forget to allow an inbound security group rule on port 3000***
-
+![screenshot](./screenshots/reactactivated.png)
 - **For our Todo app, there will be two stateful components and one stateless component.**
 
 Go to client directory from your Todo directory
@@ -810,6 +810,7 @@ When you are in the Todo directory run:
 ```
 npm run dev
 ```
+![screenshot](./screenshots/npmrundev.png)
 ***If evrything was done properly, our Todo app should be up and running with all its CRUD functionalities***
 
 ***CONGRATULATIONS YOU HAVE SUCCESFULLY IMPLENMENTED A TODO APP ON A MERN STACK👍🥇***
